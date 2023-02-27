@@ -9,10 +9,10 @@ import java.util.Map;
 public class HashCodeAndEquals {
 
     public static void main(String[] args) {
-        Map<User,String> map = new HashMap<>();
-        map.put(new User(),"123");
+        Map<User,String> map = new HashMap<>(16);
+        map.put(new User("mizhuo",23),"123");
 
-        System.out.println(map.get(new User()));
+        System.out.println(map.get(new User("mizhuo",33)));
     }
 }
 

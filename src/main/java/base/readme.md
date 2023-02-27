@@ -9,4 +9,18 @@
 - JVM
 > Java虚拟机,是JRE的一部分,它是Java实现跨平台的最核心部分,用于运行字节码文件。
 
-#### 
+#### hashCode()与equals()
+- 如果两个对象的hashcode不一致,那么肯定是两个不同的对象。
+- 如果两个对象的hashcode一致,可能是同一个对象也可能是两个不同的对象。
+- 如果两个对象相等,肯定是同一个对象。
+
+在Java的一些集合类中,判断两个对象是否相等的时候,会先调用hashcode()方法,如果hashcode一致则调用equals()方法,最终确定是否是同一个对象。所以如果重写了equals()方法,就要注意hashcode()方法,要保证能遵守上述原则。
+
+#### String、StringBuffer、StringBuilder的区别
+- String
+> String 是常量不可修改的,赋值操作只是重新指向新的常量,原常量还存在于常量池中。
+- StringBuffer
+> 可以修改,使用synchronized关键字修饰,是线程安全的。
+- StringBuilder
+> 可以修改,线程不安全,单线程环境下,效率更高。 
+

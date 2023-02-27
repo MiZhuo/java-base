@@ -5,9 +5,14 @@ package base;
  */
 public class User{
     public String name;
-    public String age;
+    public Integer age;
 
     public User() {
+    }
+
+    public User(String name, Integer age) {
+        this.name = name;
+        this.age = age;
     }
 
     public String getName() {
@@ -18,11 +23,11 @@ public class User{
         this.name = name;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -34,6 +39,6 @@ public class User{
 
     @Override
     public int hashCode() {
-        return name.hashCode();
+        return this.name.hashCode();
     }
 }
