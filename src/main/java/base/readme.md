@@ -24,3 +24,8 @@
 - StringBuilder
 > 可以修改,线程不安全,单线程环境下,效率更高。 
 
+#### 泛型中extends和super的区别
+- `<? extends T>`
+> 表示T在内的任何子类
+- `<? super T>`
+> 表示T在内的任何父类 
