@@ -56,5 +56,9 @@
 
 #### ConcurrentHashMap扩容机制
 
-
+#### Java中异常体系
+- Java中所有的异常都来自顶级父类Throwable
+- Throwable下有Error和Exception
+- Error表示非常严重的错误,比如java.lang.StockOverFlowError和java.lang.OutOfMemoryError,这些错误是无法靠程序解决的,可能是硬盘、虚拟机等操作系统层面出现故障,所以也不建议在代码中捕获这些错误,因为捕获的意义不大,程序很可能运行不了了。
+- Exception代表异常,程序出现异常,是可以通过程序自行解决的,我们可以捕获这些异常,然后进行特殊处理的。
  
